@@ -79,7 +79,7 @@ A basic understanding of Ruby and Git
 
 - GitHub: [@Bludidi](https://github.com/Bludidi)
 - Twitter: [@BB_Ludidi](https://twitter.com/bb_ludidi)
-- - LinkedIn: [LinkedIn](https://www.linkedin.com/in/brian-ludidi/)
+- LinkedIn: [Brian Ludidi](https://www.linkedin.com/in/brian-ludidi/)
 
 <!-- FUTURE FEATURES -->
 
