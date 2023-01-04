@@ -27,22 +27,34 @@
   '--..' => 'Z'
 }
 
-def decode(message)
-  # split the message into an array or words
-  words = message.split('   ')
-  decoded_message = ''
+# Create a method to decode a Morse Code character, takes a string parameter,
+# and return the corresponding character in uppercase (e.g. decode_char(".-") returns "A").
 
-  words.each do |word|
-    # split each word into an array or letters
-    letters = word.split
-    letters.each do |letter|
-      # Take each letter and check it in the morse dictionary
-      # and add it to the decoded message
-      decoded_message += @morse[letter]
-    end
-    decoded_message += ' '
-  end
-  print decoded_message
+def decode_char(morse_char)
+  @morse[morse_char]
 end
 
-decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+puts decode_char('.-')
+
+# Create a method to decode an entire word in Morse code, takes a string parameter,
+# and return the string representation. Every character in a word will be separated by a single space
+# (e.g. decode_word("-- -.--") returns "MY").
+
+def decode_word(morse_word)
+  str = ''
+  morse_word.split.each do |word|
+    str += decode_char(word).to_s
+  end
+  str
+end
+
+puts decode_word('-- -.--')
+
+# Create a method to decode the entire message in Morse code, takes a string parameter,
+# and return the string representation. Every word will be separated by 3 spaces (e.g. decode("-- -.--   -. .- -- .")
+
+def decode_message(morse_message)
+  morse_message.split('   ').map { |word| decode_word(word) }.join(' ')
+end
+
+puts decode_message('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
