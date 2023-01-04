@@ -34,7 +34,7 @@ def decode(message)
 
   words.each do |word|
     # split each word into an array or letters
-    letters = word.split(' ')
+    letters = word.split
     letters.each do |letter|
       # Take each letter and check it in the morse dictionary
       # and add it to the decoded message
@@ -45,4 +45,4 @@ def decode(message)
   print decoded_message
 end
 
-decode(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
+decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
